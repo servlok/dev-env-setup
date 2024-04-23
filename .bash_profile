@@ -32,6 +32,11 @@ alias j11="set_java_version 11"
 
 export GRAALVM_HOME=$(/usr/libexec/java_home -v 21)
 
-# yabai
-sudo yabai --load-sa
+
+# this grants yabai sudo privelaged to reload configuration (a.k.a execute `sudo yabai --load-sa`)
+# needs to be execute after yabai has been updated
+grant_yabai_privelage() {
+  echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /etc/sudoers.d/yabai
+}
+
 
