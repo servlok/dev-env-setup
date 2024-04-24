@@ -22,6 +22,8 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
+Plug 'preservim/nerdtree'
+
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
@@ -29,9 +31,19 @@ let mapleader=" "
 "map \r <Action>(ReformatCode)
 
 "" Navigation between groups
-map <C-w>m <Action>(MoveEditorToOppositeTabGroup)
-map <C-w>a <Action>(CloseAllEditorsButActive)
-map <C-w>q <Action>(CloseEditor)
+map <C-l> <C-w>w
+map <C-h> <C-w><S-w>
+
+"" Split window vertically
+map <leader>sv <C-w>v
+"" Split window horizontally
+map <leader>sh <C-w>s
+
+"" Make split equal
+map <leader>se <C-w>=
+map <leader>sm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>s<S-x> <Action>(CloseAllEditorsButActive)
+map <leader>sx <Action>(CloseEditor)
 
 ""
 map <leader>r <Action>(RenameElement)
