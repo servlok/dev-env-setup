@@ -56,17 +56,26 @@ map <leader>ef :NERDTreeToggle<CR>
 map <leader>ec :NERDTreeClose<CR>
 map <leader>er :NERDTreeRefreshRoot<CR>
 
-""
-map <leader>r <Action>(RenameElement)
-nmap <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>d <Action>(Debug)
+"" Run 
+map <leader>xc <Action>(RunClass)
 
-"" Navigation in cod
+"" Refactor actions
+map <leader>r <Action>(RenameElement)
+
+"" Naviagate through code actions
 nmap <leader>c <Action>(CallHierarchy)
 nmap <leader>s <Action>(ShowUsages)
 nmap <leader>t <Action>(TypeHierarchy)
 nmap <leader>u <Action>(FindUsages)
-nmap <leader>v <Action>(Vcs.QuickListPopupAction)
-nmap <leader>x <Action>(HideAllWindows)
-
 nmap g] <Action>(GotoImplementation)
+
+"" Debugging
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dr <Action>(Debug)
+map <leader>dc <Action>(DebugClass)
+
+"" Other
+nmap <leader>vp <Action>(Vcs.QuickListPopupAction)
+nmap <leader>va <Action>(HideAllWindows)
+nmap <leader>R <Action>(IdeaVim.ReloadVimRc.reload)
+
