@@ -19,7 +19,7 @@ map Q gq
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
+" Commentary plugi/n
 Plug 'tpope/vim-commentary'
 
 Plug 'preservim/nerdtree'
@@ -53,8 +53,6 @@ map <leader>- <C-x>
 "" NERD tree configuration
 map <leader>ee :NERDTree<CR>
 map <leader>ef :NERDTreeToggle<CR>
-map <leader>ec :NERDTreeClose<CR>
-map <leader>er :NERDTreeRefreshRoot<CR>
 
 "" Run 
 map <leader>xc <Action>(RunClass)
