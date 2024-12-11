@@ -38,10 +38,17 @@ map <leader>sv <C-w>v
 "" Split window horizontally
 map <leader>sh <C-w>s
 
+"" Tab
+nmap <leader>tn <Action>(NextTab)
+nmap <leader>tp <Action>(PreviousTab)
+nmap <leader>tx <Action>(CloseEditor)
+nmap <leader>t<S-x> <Action>(CloseAllEditors)
+nmap <leader>t<S-a> <Action>(CloseAllEditorsButActive)
+nmap <leader>to <Action>(OpenTab)
+
 "" Make split equal
 map <leader>se <C-w>=
 map <leader>sm <Action>(MoveEditorToOppositeTabGroup)
-map <leader>s<S-x> <Action>(CloseAllEditorsButActive)
 map <leader>sx <Action>(CloseEditor)
 
 
